@@ -20,4 +20,11 @@ jobs:
         run: yarn
       
       - name: Install Dependencies
-        run: yarn changeexist
+        run: |
+          #!/bin/bash
+          if [ -e CHANGELOG.md ]
+          then
+              echo "true"
+          else
+              echo "false"
+          fi

@@ -1,5 +1,11 @@
 # model-changelogv6
 
+## 2.1.0
+
+### Minor Changes
+
+- pattern pull request
+
 ## 2.0.0
 
 ### Major Changes

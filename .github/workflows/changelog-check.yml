@@ -1,0 +1,23 @@
+name: changelog
+
+on:
+  push:
+    branches:
+      - development
+ 
+jobs:
+  changelog:
+    name: changelog-check
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Setup Node.js 14.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 14.x
+
+      - name: Install Dependencies
+        run: yarn
+      
+      - name: Install Dependencies
+        run: yarn changeexist

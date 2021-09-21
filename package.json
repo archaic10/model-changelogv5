@@ -5,7 +5,8 @@
   "author": "archaic10",
   "license": "MIT",
   "scripts": {
-    "release": "yarn changeset publish"
+    "release": "yarn changeset publish",
+    "changeexist": "node changelog.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

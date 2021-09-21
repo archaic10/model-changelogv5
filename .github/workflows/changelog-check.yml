@@ -6,26 +6,19 @@ on:
       - development
  
 jobs:
-  changelog:
-    name: changelog-check
+  file_existence:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
 
-      - name: Setup Node.js 14.x
-        uses: actions/setup-node@master
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1
         with:
-          node-version: 14.x
+          files: "CHANGELOG.md"
 
-      - name: Install Dependencies
-        run: yarn
-      
-      - name: Install Dependencies
-        run: |
-          ls
-          pwd         
-          if [ -e CHANGELOG.md ]
-          then
-              echo "true"
-          else
-              echo "false"
-          fi
+      - name: File exists
+        if: steps.check_files.outputs.files_exists == 'true'
+        # Only runs if all of the files exists
+        run: echo All files exists!

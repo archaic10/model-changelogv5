@@ -1,0 +1,35 @@
+{
+  "name": "model-changelogv6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "archaic10",
+  "license": "MIT",
+  "scripts": {
+    "release": "yarn changeset publish"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "auto-changelog": "^2.3.0",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^7.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.17.0",
+    "changeset": "^0.2.6"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}

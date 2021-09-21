@@ -20,8 +20,7 @@ jobs:
         run: yarn
       
       - name: Install Dependencies
-        run: |
-          #!/bin/bash
+        run: |         
           if [ -e CHANGELOG.md ]
           then
               echo "true"

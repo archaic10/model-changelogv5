@@ -1,11 +1,12 @@
 {
   "name": "model-changelogv6",
-  "version": "2.1.0",
+  "version": "1.1.0",
   "main": "index.js",
   "author": "archaic10",
   "license": "MIT",
   "scripts": {
-    "release": "yarn changeset publish"
+    "release": "yarn changeset publish",
+    "changeexist": "node changelog.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
